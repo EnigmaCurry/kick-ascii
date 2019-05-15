@@ -11,7 +11,7 @@
       autoplay = " autoplay=\"true\" "
     }
 
-    crt.innerHTML = "<asciinema-player id=\"asciinema-player\" src=\"/cast/" + cast + ".cast\" font-size=\"small\"" + autoplay + "preload=\"true\" loop=\"true\" speed=\"" + speed + "\"></asciinema-player>"
+    crt.innerHTML = "<asciinema-player id=\"asciinema-player\" src=\"cast/" + cast + ".cast\" font-size=\"small\"" + autoplay + "preload=\"true\" loop=\"true\" speed=\"" + speed + "\"></asciinema-player>"
 
     var player = document.getElementsByTagName("asciinema-player")[0]
 
@@ -21,7 +21,7 @@
     background.classList.add("bg_image")
 
     if (bg != null) {
-      background.src = "/img/" + bg
+      background.src = "img/" + bg
       document.body.append(background)
     }
 

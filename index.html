@@ -5,12 +5,12 @@
     <body>
         <script>
          var m = window.location.pathname.match(/\/((.*)(\.html?))?/)
-         console.log(window.location.pathname)
          if (m != null) {
-             if (window.location.pathname === "/") {
-                 window.location.href = window.location.origin + "/v.htm"
+             if (window.location.pathname.endsWith("/")) {
+                 window.location.href = "v.htm"
              } else {
-                 window.location.href = window.location.origin + "/v.htm?cast=" + m[1]
+                 console.log(m)
+                 //window.location.href = "v.htm?cast=" + m[1]
              }
          }
         </script>

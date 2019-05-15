@@ -4,27 +4,26 @@ A mobile-first responsive layout implemention of
 [asciinema-player](https://github.com/asciinema/asciinema-player). Self host
 your own ASCII theatre on the web.
 
-[![asciicast](https://asciicast.rymcg.tech/cast/index.jpg)](https://asciicast.rymcg.tech/v.htm?cast=index&bg=matrix.jpg)
+[![asciicast](http://enigmacurry.github.io/kick-ascii/cast/index.jpg)](http://enigmacurry.github.io/kick-ascii/v.htm?cast=index&bg=matrix.jpg)
 
- * Put your cast files in the `cast` directory.
+ * Fork this repository on GitHub.
 
- * Run Python web server to serve locally:
-
-  ```
-  python3 -m http.server
-  ```
-
- * View in your browser:
+ * Go to the repository Settings -> Options -> GitHub Pages -> Source -> **choose master branch dropdown** 
+ 
+ * Visit `http://USERNAME.github.io/kick-ascii` (change USERNAME to your github username or organization name.)
 
    * Link to index.cast:
-     * [http://localhost:8000](http://localhost:8000)
+     * [http://enigmacurry.github.io/kick-ascii](http://enigmacurry.github.io/kick-ascii)
    * Link to a specific cast:
-     * [http://localhost:8000/v.htm?cast=matrix](http://localhost:8000/v.htm?cast=matrix)
+     * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix](http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix)
    * Specify a custom background image:
-     * [http://localhost:8000/v.htm?cast=k8s-lbry&bg=lbry.png](http://localhost:8000/v.htm?cast=k8s-lbry&bg=lbry.png)
-
- * Upload this whole directory to your webhost.
+     * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png](http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png)
+     
+ * Make new recordings with [asciinema](https://asciinema.org/). Put cast files
+   in the `cast` directory. Commit your changes to git, and push to GitHub.
  
+ * Alternatively, upload this entire directory to any webhost. It's just a
+   static website.
 
 ## What is v.htm? (and why not just index.html???)
 
