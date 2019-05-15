@@ -18,9 +18,18 @@ your own ASCII theatre on the web.
      * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix](http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix)
    * Specify a custom background image:
      * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png](http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png)
+   * Choose a different playback speed:
+     * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png&speed=3](http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png&speed=3)
+   * Prevent autoplay:
+     * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix&autoplay=false](http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix&autoplay=false)
      
- * Make new recordings with [asciinema](https://asciinema.org/). Put cast files
-   in the `cast` directory. Commit your changes to git, and push to GitHub.
+ * Make new recordings with [asciinema](https://asciinema.org/). 
+ 
+ * Put cast files and cover images in the `cast` directory. 
+ 
+ * Put custom background images in the `img` directory.
+ 
+ * Commit your changes to git, and push to GitHub.
  
  * Alternatively, upload this entire directory to any webhost. It's just a
    static website.
@@ -42,3 +51,13 @@ But why `v.htm`?
    content-type `text/html`.
  * `v.htm` is shorter than `v.html`.
 
+## I can't click on the progress bar to jump around the timeline!
+
+This is a feature of the upstream
+[asciinema-player](https://github.com/asciinema/asciinema-player), however in
+several instances of my testing, it has rendered the page entirely unresponsive.
+It happens often enough that I've decided to make the progress bar non-clickable
+(`pointer-events: none` in [asciinema-player.css](player/asciinema-player.css)).
+The arrow keys are still enabled, and they serve the same function, to rewind
+and fast forward. However, I would caution you to use this feature sparingly,
+and not try to advance too many frames at once.
