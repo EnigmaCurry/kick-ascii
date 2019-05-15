@@ -11,12 +11,19 @@ body {
   left: 0;
   transform-origin: left top;
 }
+#CRT_BOX.crt_wide {
+  left: 50%;
+}
 .bg_image {
   position: fixed;
   top: 50%;
   width: 100%;
   z-index: -100;
-  transform: translateX(0%) translateY(-50%);
+  transform: translateY(-50%);
+}
+.bg_raised {
+  top: 0;
+  transform: none;
 }
 .asciinema-player-wrapper {
   position: relative;

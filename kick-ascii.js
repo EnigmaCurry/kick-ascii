@@ -13,8 +13,6 @@
 
     var player = document.getElementsByTagName("asciinema-player")[0]
 
-    var wrapper = document.getElementsByClassName("asciinema-player-wrapper")[0]
-
     var background = document.createElement("img")
     background.classList.add("bg_image")
 
@@ -24,15 +22,24 @@
     }
 
     window.addEventListener('resize',  function() {
-      var control_bar_offset = 23;
-      var scale = (document.body.clientHeight / (wrapper.clientHeight + control_bar_offset));
-      crt.style.transform = "scale("+scale+")";
-      if (wrapper.clientWidth * scale < document.body.clientWidth) {
-        crt.style.transform = "scale("+scale+") translate(-50%, 0%)";
-        crt.style.left = "50%"
+      var wrapper = document.getElementsByClassName("asciinema-player-wrapper")[0]
+      if (wrapper != null) {
+        var control_bar_offset = 23;
+        var scale = (document.body.clientHeight / (wrapper.clientHeight + control_bar_offset));
+        if (wrapper.clientWidth * scale < document.body.clientWidth) {
+          crt.style.transform = "scale("+scale+") translate(-50%, 0%)";
+          crt.classList.add("crt_wide")
+          background.classList.remove("bg_raised")
+        } else {
+          scale = (document.body.clientWidth / (wrapper.clientWidth));
+          crt.style.transform = "scale("+scale+")";
+          crt.classList.remove("crt_wide")
+          background.classList.add("bg_raised")
+        }
       }
     });
     window.dispatchEvent(new Event('resize'));
+    setInterval(function(){window.dispatchEvent(new Event('resize'));}, 1000)
 
     var playing = true;
     let drag = false;
