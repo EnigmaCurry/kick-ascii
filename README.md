@@ -4,7 +4,7 @@ A mobile-first responsive layout implemention of
 [asciinema-player](https://github.com/asciinema/asciinema-player). Self host
 your own ASCII theatre on the web.
 
-[![asciicast](http://enigmacurry.github.io/kick-ascii/cast/index.jpg)](http://enigmacurry.github.io/kick-ascii/v.htm?cast=index&bg=matrix.jpg)
+[![asciicast](http://enigmacurry.github.io/kick-ascii/cast/index.jpg)](http://enigmacurry.github.io/kick-ascii/?cast=index&bg=matrix.jpg)
 
  * Fork this repository on GitHub.
 
@@ -16,13 +16,13 @@ your own ASCII theatre on the web.
    * Link to index.cast:
      * [http://enigmacurry.github.io/kick-ascii](http://enigmacurry.github.io/kick-ascii)
    * Link to a specific cast:
-     * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix](http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix)
+     * [http://enigmacurry.github.io/kick-ascii/?cast=matrix](http://enigmacurry.github.io/kick-ascii/?cast=matrix)
    * Specify a custom background image:
-     * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png](http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png)
+     * [http://enigmacurry.github.io/kick-ascii/?cast=k8s-lbry&bg=lbry.png](http://enigmacurry.github.io/kick-ascii/?cast=k8s-lbry&bg=lbry.png)
    * Choose a different playback speed:
-     * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png&speed=3](http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png&speed=3)
+     * [http://enigmacurry.github.io/kick-ascii/?cast=k8s-lbry&bg=lbry.png&speed=3](http://enigmacurry.github.io/kick-ascii/?cast=k8s-lbry&bg=lbry.png&speed=3)
    * Disable pre-loading, no autoplay, no loop:
-     * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix&autoplay=false&preload=false&loop=false](http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix&autoplay=false&preload=false&loop=false)
+     * [http://enigmacurry.github.io/kick-ascii/?cast=matrix&autoplay=false&preload=false&loop=false](http://enigmacurry.github.io/kick-ascii/?cast=matrix&autoplay=false&preload=false&loop=false)
 
  * Make new recordings with [asciinema](https://asciinema.org/). 
  
@@ -34,23 +34,6 @@ your own ASCII theatre on the web.
  
  * Alternatively, upload this entire directory to any webhost. It's just a
    static website.
-
-## What is v.htm? (and why not just index.html???)
-
-Not all webhosts support directory indexes. **[I'm looking at you DigitalOcean Spaces.](https://www.digitalocean.com/community/questions/spaces-set-index-html-as-default-landing-page)**
-
-On DigitalOcean Spaces my URLs look like this:
-
-```
-https://asciicast.sfo2.digitaloceanspaces.com/v.htm?cast=k8s-lbry&bg=lbry.png
-```
-
-But why `v.htm`?
- 
- * `index.html` in the URL is ugly.
- * It needs to be `.html` or `.htm` to automatically be categorized as
-   content-type `text/html`.
- * `v.htm` is shorter than `v.html`.
 
 ## I can't click on the progress bar to jump around the timeline!
 
