@@ -8,7 +8,8 @@ your own ASCII theatre on the web.
 
  * Fork this repository on GitHub.
 
- * Go to the repository Settings -> Options -> GitHub Pages -> Source -> **choose master branch dropdown** 
+ * Go to your new repository's Settings -> Options -> GitHub Pages -> Source ->
+   **choose master branch dropdown**
  
  * Visit `http://USERNAME.github.io/kick-ascii` (change USERNAME to your github username or organization name.)
 
@@ -20,9 +21,9 @@ your own ASCII theatre on the web.
      * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png](http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png)
    * Choose a different playback speed:
      * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png&speed=3](http://enigmacurry.github.io/kick-ascii/v.htm?cast=k8s-lbry&bg=lbry.png&speed=3)
-   * Prevent autoplay:
-     * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix&autoplay=false](http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix&autoplay=false)
-     
+   * Disable pre-loading, no autoplay, no loop:
+     * [http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix&autoplay=false&preload=false&loop=false](http://enigmacurry.github.io/kick-ascii/v.htm?cast=matrix&autoplay=false&preload=false&loop=false)
+
  * Make new recordings with [asciinema](https://asciinema.org/). 
  
  * Put cast files and cover images in the `cast` directory. 

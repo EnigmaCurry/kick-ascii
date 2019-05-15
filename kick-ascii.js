@@ -2,16 +2,14 @@
     var crt = document.getElementById("CRT_BOX")
     var urlParams = new URLSearchParams(window.location.search)
     var cast = urlParams.get("cast") != null ? urlParams.get("cast") : "index"
-    var speed = urlParams.get("speed") != null ? urlParams.get("speed"): "1"
+    var speed = urlParams.get("speed") == null ? " speed=\"1\" " : " speed=\"" + urlParams.get("speed") + "\" "
     var bg = urlParams.get("bg")
-    var autoplay
-    if (urlParams.get("autoplay") === "false") {
-      autoplay = ""
-    } else {
-      autoplay = " autoplay=\"true\" "
-    }
+    var autoplay = urlParams.get("autoplay") === "false" ? "" : " autoplay=\"true\" "
+    var loop = urlParams.get("loop") === "false" ? "" : " loop=\"true\" "
+    var preload = urlParams.get("preload") === "false" ? "" : " preload=\"true\" "
+    var fontsize = urlParams.get("fontsize") == null ? " fontsize=\"small\" " : " fontsize=\"" + urlParams.get("fontsize") + "\" "
 
-    crt.innerHTML = "<asciinema-player id=\"asciinema-player\" src=\"cast/" + cast + ".cast\" font-size=\"small\"" + autoplay + "preload=\"true\" loop=\"true\" speed=\"" + speed + "\"></asciinema-player>"
+    crt.innerHTML = "<asciinema-player id=\"asciinema-player\" src=\"cast/" + cast + ".cast\"" + fontsize + autoplay + loop + preload + speed + "></asciinema-player>"
 
     var player = document.getElementsByTagName("asciinema-player")[0]
 
